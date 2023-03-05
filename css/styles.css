@@ -797,3 +797,73 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+.grid {
+  display: grid;
+}
+
+
+/**
+* Grid CSS
+**/
+
+main.gallery {
+  padding: 2rem;
+}
+
+.gallery > .gallery__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: 300px 100px 300px;
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+}
+
+.gallery > .gallery__list li{
+  cursor: pointer;
+}
+
+.gallery > .gallery__list li:hover{
+  opacity: 0.7;
+}
+
+.gallery > .gallery__list > li:nth-child(2n) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.gallery > .gallery__list > li:nth-child(3n) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.gallery > .gallery__list > li:nth-child(5n) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.gallery > .gallery__list > li:nth-child(6n) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.gallery > .gallery__list > li:nth-child(7n) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.gallery > .gallery__list > li:nth-child(8n) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.gallery > .gallery__list > li > figure {
+  height: 100%;
+}
+
+.gallery > .gallery__list > li > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
