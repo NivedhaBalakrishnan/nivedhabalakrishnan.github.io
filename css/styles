@@ -238,7 +238,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/bkg2.jpg');
+  background-image: url('water.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
