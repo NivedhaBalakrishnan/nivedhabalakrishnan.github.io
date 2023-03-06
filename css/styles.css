@@ -5,7 +5,7 @@
  */
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Futura,Trebuchet MS,Arial,sans-serif;
 }
 .text-muted {
   color: #777777;
@@ -16,7 +16,7 @@ body {
   color: #ffffff;
 }
 p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.75;
 }
 p.large {
