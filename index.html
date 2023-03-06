@@ -102,42 +102,42 @@
         </div>
         <main class="gallery">
             <ul class="gallery__list">
-              <li>
+              <li data-id="project_1">
                 <figure>
                   <img src="https://acxngcvroo.cloudimg.io/v7/http://content.embl.org/sites/default/files/2021-10/MARTIN-HERRANZ_Epigenetics_EMBL-EBI_500x375_1.jpg?w=1000&h=600" alt="Juno's Latest Flyby of Jupiter Captures Two Massive Storms">
                 </figure>
               </li>
-              <li>
+              <li data-id="project_2">
                 <figure>
                   <img src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA23021_hires.jpg" alt="A first look at dunes">
                 </figure>
               </li>
-              <li>
+              <li data-id="project_3">
                 <figure>
                   <img src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA23002_hires.jpg" alt="K2-138 6 Planets Artwork (Artist's Illustration) ">
                 </figure>
               </li>
-              <li>
+              <li data-id="project_4">
                 <figure>
                   <img src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA21212_hires.jpg" alt="Small Prominences">
                 </figure>
               </li>
-              <li>
+              <li data-id="project_5">
                 <figure>
                   <img src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA22983_hires.jpg" alt="Ezinu Crater">
                 </figure>
               </li>
-              <li>
+              <li data-id="project_6">
                 <figure>
                   <img src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA22990_hires.jpg" alt="Polar Ice">
                 </figure>
               </li>
-              <li>
+              <li data-id="project_7">
                 <figure>
                   <img src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA22963_hires.jpg" alt="Jupiter">
                 </figure>
               </li>
-              <li>
+              <li data-id="project_8">
                 <figure>
                   <img src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA22918_hires.jpg" alt="Star Gaia 17pbi Seen by Spitzer">
                 </figure>
@@ -195,7 +195,7 @@
                     <ul class="timeline">
 						<li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/logos/prog.png" alt="">
+                                <img class="img-responsive" src="img/logos/prog.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -207,7 +207,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/logos/hand.png" alt="">
+                                <img class="img-responsive" src="img/logos/intern.png" alt="">
                             </div>
                             <div class="timeline-panel">
 								<div class="timeline-heading">
@@ -218,7 +218,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/logos/lab.png" alt="">
+                                <img class="img-responsive" src="img/logos/lab.png" alt="">
                             </div>
                             <div class="timeline-panel">
 								<div class="timeline-heading">
@@ -253,6 +253,234 @@
 			</div>
 		</div>
 	 </section>
+     <div class="overlay-container">
+        <div class="overlay-content">
+            <div class="overlay-close-icon">
+                <img class="img-responsive" src="img/logos/x-lg.svg" alt="">
+            </div>
+            <!-- Project details here -->
+            <!-- Aging Clock -->
+            <div class="project-details" id="project_1">
+                <h1><font size="10">Aging Clock</font>
+                    <br>Prediction of Age using Biomarkers</br>
+                </h1>
+                
+            <div>
+                <h2>Problem Statement</h2>
+                <p align="justify">
+                    As humans, we all desire to live long and healthy lives. However, aging is a complex process that increases our risk of developing chronic diseases, impacting our overall health and well-being. To combat this, identifying biomarkers associated with healthy aging is crucial for developing interventions and treatments to delay or prevent age-related diseases, ultimately increasing our healthy lifespan. The problem lies in accurately and meaningfully identifying such biomarkers, which are key to assessing anti-aging therapies. Therefore, the challenge is to identify and validate reliable biomarkers for human aging, which can be used to develop effective treatments and improve the quality of life for older adults. 
+                </p>
+            </div>
+        
+                <h2>Goal</h2>
+                <p align="justify">
+                    This project aims to uncover biomarkers in blood and urine that are linked with human aging and to create an accurate regression model that can predict a person's age based on these biomarkers. By analyzing a comprehensive dataset of biomarkers from individuals of different ages and using advanced statistical and machine learning methods, this project seeks to identify key biomarkers that are associated with aging. Ultimately, this project aims to advance our knowledge of human aging and potentially lead to the development of interventions to support healthy aging and promote longevity.
+                </p>
+        
+                <h2>Data Collection</h2>
+                <p align="justify">
+                    The dataset used in this project consists of biomarkers obtained from laboratory analysis of blood and urine samples. The biomarkers were collected from the National Health and Nutrition Examination Survey (<a href="https://wwwn.cdc.gov/nchs/nhanes/">NHANES</a>), which is a program that gathers health and nutritional information from a representative sample of the US population. NHANES provides a valuable resource for studying the relationship between biomarkers and aging. The dataset used in this project consists of over 100,000 samples and 22 features including Age, Gender and other Biochemical profile.
+                </p>    
+                
+                
+                <h2>Exploratory Data Analysis</h2>
+                <p alingn="justify">
+                    Exploratory Data Analysis (EDA) is a crucial step in any data analysis project as it helps in understanding the characteristics and properties of the data. In this project, the data is analyzed through visualizations in using Matplotlib and Seaborn libraries.
+                </p>
+                    <h3>Analysis of Age</h3>
+                    <center><img src="eda/1 Age.png" width="700" height="250"></center>
+                    <h4>Observation</h4>
+                    <p>
+                        <ul>
+                            <li>Distribution of Age revealed that there are more than 10k samples of infants and toddlers (Age 0-2).</li>    
+                            <li>25th percentile of the data covers the Age less than or equal to 10 whereas 50% of the data belongs to Age less than 24.</li>
+                            <li>This suggests that the significant percentage of data belongs to Children and teenagers.</li>
+                            <li>The distribution of Age between the Male and Female is similar, suggesting that the data is unbiased with respect to Gender.</li>
+                        </ul>
+                    </p>
+        
+                    <h3>Distributions of Biomarkers</h3>
+                    <center><img src="eda/3 Distribution.png" width="1200" height="900"></center>
+                    
+                    <h4>Observation</h4>
+                    <p>The distribution of Biomarkers give us an insight about how the variable are distributed.
+                        <ul>
+                            <li>Potassium, Sodium, Calcium, Protein, RBC, Hemoglobin, Hematocrit and MCV are <b>Normally distributed.</b></li>
+                            <li>Albumin, Glucose, Bilirubin, Alkaline Phosphate and Triglycerides are <b>heavily skewed on the right side.</b></li>  
+                            <li>It is important to notice that the <b>most features are right skewed.</b></li>  
+                        </ul>
+                    </p>
+                    
+                    <br>
+                    <h3>Correlations between the features</h3>
+                    <center><img src="eda/2 Correlation.png" width="800" height="500"></center>
+                    
+                    <h4>Observation</h4>
+                    <p>From the correlation matrix we can see a strong correlation between:
+                        <ul>
+                            <li>Cholestrol and LDL</li>
+                            <li>Hemoglobin and RBC</li>  
+                            <li>Hematocrit and RBC</li>
+                            <li>Hemoglobin and Hematocrit</li>
+                        </ul>
+                        Little or no correlation is found between other features.
+                    </p>
+        
+                    <br>
+                    <h3>Scatter plot and Median of Biomarkers over Age</h3>
+                    
+                    <div class="clearfix">
+                        <div class="img-container">
+                            <img src="eda/7 Scatter.png" alt="Italy" style="width:100%">
+                        </div>
+                        <div class="img-container">
+                        <img src="eda/12 Median.png" alt="Forest" style="width:100%">
+                        </div>
+                    </div>
+        
+                    <h4>Observation</h4>
+                    <p>The image in the left is the scatter plot between each features with respect to age, whereas the image in the right indicated the age-wise median values of features.
+                        <ul>
+                            <li>Although we couldn't infer much information from the scatter plot, the median plots gives us a clear variation of the Biomarkers over age.</li>  
+                            <li>We can see biomarkers such as Albumin, Glucose, Urea and MCV increases over age.</li>
+                            <li>Also, RBC and Platelets decreases over age.</li>
+                            <li>This explains 45% correlation between Urea and MCV with respect to age.</li>
+                        </ul>
+        
+                    <br>
+                    <h3>Box plt with respect to Gender</h3>
+                    
+                    <center><img src="eda/8 Gender Aft.png" width="1000" height="800"></center>
+        
+                    <h4>Observation</h4>
+                    <p>
+                        <ul>
+                            <li>Prominent difference between the gender can be seein in RBC, Hemogloin and Hematocrit. This can be explained by the fact that the male has higher RBC count than female in general.</li>
+                            <li>We can also see the differences in Urea, HDL, Bilirubin, Calcium and Creatinine as well.</li>
+                        </ul>
+                        <p><strong>Note:</strong> Albumin is log transformed as it is highly skewed, and the distribution with the box plot cannot be seen without transformation. Also, the outliers are removed for this figure to make the visualization clear and prominent.</p>
+                    </p>
+        
+                <h2>Data Cleaning</h2>
+                <p>
+                    The dataset contains lot of missing value as shown in the figure below. Therefore, it is really important to clean the data before we build the regression model. We can see that Glucose, LDL and Triglycerides have around 70% of null values. It is really important to handle the null values carefully to avoid errors.
+                    <br>
+                    <center><img src="null.png"></center>
+                    <h3>Handling Null Values and Outliers</h3>
+                    <center><img src="eda/Missing data.gif"></center>
+        
+                    Handling the null values are carried out in six steps as follow:
+                    <h4>Step 1</h4>
+                        <ul>
+                            <li>During our exploratory data analysis, we observed that several rows in the dataset had missing values for all features except for age and gender.</li>
+                            <li>Considering the potential increase in data imputation errors, we made the decision to remove these rows from our analysis.</li>
+                        </ul>
+                    <h4>Step 2</h4>
+                    <ul>
+                        <li>Upon reviewing the dataset, it has been observed that samples with an age less than or equal to 10 have missing values for features ranging from Glucose to Alkaline Phosphatase.</li>
+                        <li>Thus, we had to removed samples with Age less than or equal to 10, confining the dataset from age 11 to 85.</li>
+                    </ul>
+                    <h4>Step 3</h4>
+                    <center><img src="eda/10 ldl vs chol.png"></center>
+                    <ul>
+                        <li>As indicated by the correlation matrix as well as the above figure, LDL exhibits a strong correlation with Cholesterol. However, the data for LDL is comparatively more sparse than that of Cholesterol.</li>
+                        <li>Linear Regression is applied to impute LDL based on Cholesterol values.</li>
+                    </ul>
+                    <h4>Step 4</h4>
+                    <ul>
+                        <li>The remaining missing values are filled with the median of same age or the median bucketted age.</li>
+                        <li>We choose Median instead of Mean because not all the features are normally distributed.</li>
+                    </ul>
+                    <h4>Step 5</h4>
+                    <ul>
+                        <li>The outliers are removed with respect to Inter Quartile Range (IQR)</li>
+                        <li>Removing outliers helps to reduce the effect of extreme values that do not represent the normal distribution of the data.</li>
+                    </ul>
+                    
+                
+                </p>
+                
+                <h2>Modeling and Evaluation</h2>
+        
+                <div>
+                <p align="justify">
+                    In this project, various regression methods were applied to predict age based on the identified biomarkers. These methods include Linear Regression (LR), Ridge Regression (RR), Lasso Regression (LsR), Elastic Net Regression (ENR), Decision Tree Regression (DTR), Random Forest Regression (RFR), Gradient Boosting Regression (GBR), XGBoost Regression (XGBR), Support Vector Regression (SVR), and Multilayer Perceptron Regression (MLP).
+                    In addition, to ensure the reliability of the models, 5-fold cross-validation was applied to evaluate the performance of each regression method. The mean squared error (MSE) and root mean squared error (RMSE) were calculated for each fold and the average values were used to assess the overall performance of the model. 
+                </p>
+                
+                <h4>Techniques applied to improve the model</h4>
+                <ul>
+                    <li><b>Normalization: </b>The data is normalized using MinMaxScaler technique to ensure that they are all on the same scale.</li>
+                    <li><b>PCA: </b>PCA is applied to reduce the number of features and eliminate any potential multicollinearity among them. The resulting principal components with 95% variance are then used as input variables in the regression models to predict age.</li>
+                    <li><b>Hyperparameter Tuning: </b>GridSearchCV is used to find the best hyperparameters for all the model. The best parameters are then applied to optimize each model.</li>
+                </ul>
+                </div>
+        
+                <div class="clearfix" style="display:flex; align-items:center;">
+                    <div class="img-container">
+                        <img src="results.png" style="width:100%">
+                    </div>
+                    <div class="img-container">
+                    <img src="final.png" alt="Forest" style="width:100%">
+                    </div>
+                </div>
+        
+                <h4>Model Results</h4>
+                <p align="justify">
+                <ul>
+                    Based on the results obtained from the regression models, we can make several observations.
+                    <li>In the Baseline model, Random Forest, Gradient Boost and XGBoost Regressor models have demonstrated superior performance compared to the other models.</li>
+                    <li>However, applying normalization to the data has not shown any improvement in the performance of the models. Surprisingly, it has even increased the error for Lasso Regressor and ElasticNet Regressor.</li>
+                    <li>When applied PCA to the data, the model's performance has declined drastically for all the models. Therefore, we can conclude that applying PCA may not be suitable for this dataset.</li>
+                    <li>The hyperparameter tuning has led to better performance in the models.</li>
+                    <li>Upon closer inspection of the right figure, it can be observed that there is no significance difference between the training and validation scores for all models, except the top-performing Random Forest, Gradient Boost, and XGBoost Regressor.</li>
+                    <li>By comparing the model performance, we choose <b>Random Forest Regressor</b> as the best model since it has less RMSE and less difference between the training and validation scores among the best performing models.</li>
+                </ul>
+                </p>
+        
+                <h4>Feature Importance</h4>
+                <p  align="justify">
+                Identifying the key biomarkers involved in aging is one the goal of this project. Since, correlation matrix only captures the linear relationship, <b>Permutation Feature Importance</b> method is used with the best performing <b>Random Forest Regressor</b> and <b>Gradient Boosting Regressor</b> models to identify features that has significant influence on the aging. This method recognizes non-linear relationship between the features and the target that could not be captures by the correlation matrix.
+                </p>
+                
+                <div class="clearfix" style="display:flex; align-items:center;">
+                    <div class="img-container">
+                        <img src="ft rfr.png" style="width:100%">
+                    </div>
+                    <div class="img-container">
+                    <img src="ft gbr.png" alt="Forest" style="width:100%">
+                    </div>
+                </div>
+        
+                <ul>
+                    Based on the Permutation Feature Importance method, we can make several observations.
+                    <li>Glucose is the strong indicator of age followed by Triglycerides.</li>
+                    <li>Alkaline Phosphatase and Urea is the third and fourth important features. This is in line with the correlation matrix, as these two features had 45% correlation with Age.</li>
+                    <li>Bilirubin and blood indicators such as Hemoglobin, Hematocrit are poor indicators of age according to this findings.</li>
+                </ul>
+        
+        
+                <!-- <h2>Conclusions and Drawbacks</h2> -->
+                
+                
+                <h2>Future Work</h2>
+                <ul>
+                    <li>Rerun the model by removing the rows with any null values to see whether the data imputation has any effect on the Modeling performance or Permutation Feature Importance method.</li>
+                    <li>Include demographic and other examination data from NHAHES website.</li>
+                    <li>Implementing deep learning models.</li>
+                </ul>
+            </div>
+            <div class="project-details" id="project_2">Project 2</div>
+            <div class="project-details" id="project_3">Project 3</div>
+            <div class="project-details" id="project_4">Project 4</div>
+            <div class="project-details" id="project_5">Project 5</div>
+            <div class="project-details" id="project_6">Project 6</div>
+            <div class="project-details" id="project_7">Project 7</div>
+            <div class="project-details" id="project_8">Project 8</div>
+        <div class="overlay-footer"></div>
+
+        </div>
+     </div>
 
     <footer>
         <div class="container">
