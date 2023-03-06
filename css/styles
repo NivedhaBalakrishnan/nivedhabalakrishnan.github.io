@@ -50,11 +50,9 @@ h6 {
 .img-centered {
   margin: 0 auto;
 }
-.bg-light-gray {
-  background-color: #c2c2c2;
-}
+
 .bg-darkest-gray {
-  background-color: #222222;
+  background-color: #0d0542;
 }
 .btn-primary {
   color: white;
