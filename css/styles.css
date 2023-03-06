@@ -932,10 +932,22 @@ main.gallery {
   font-size: 15px;
 }
 
-/*
+.timeline-image img {
+  top: 11px;
+  left: 18px;
+  position: relative;
+}
+
+
 @media only screen and (max-width: 600px) {
   .overlay-container.show .overlay-content {
     padding: 20px 10px;
   } 
+
+  .timeline-image img {
+    top: 5px;
+    left: 7px;
+    width: 75%;
+    height: 75%;
+  }
 }
-*/
