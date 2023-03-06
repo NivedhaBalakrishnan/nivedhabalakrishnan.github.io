@@ -683,6 +683,7 @@ footer ul.quicklinks {
 }
 ul.social-buttons {
   margin-bottom: 0;
+  margin-top:20px;
 }
 ul.social-buttons li a {
   display: block;
@@ -697,12 +698,14 @@ ul.social-buttons li a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+  text-align: center;
 }
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
   background-color: #333333;
 }
+
 .btn:focus,
 .btn:active,
 .btn.active,
