@@ -814,10 +814,11 @@ main.gallery {
 .gallery > .gallery__list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: 300px 100px 300px;
   grid-gap: 1rem;
   grid-auto-flow: dense;
+  padding: inherit;
 }
 
 .gallery > .gallery__list li{
@@ -867,3 +868,74 @@ main.gallery {
   height: 100%;
   object-fit: cover;
 }
+
+.overlay-container {
+  display: none;
+  opacity: 0;
+  transition: display 0.8s ease 0.3s;
+}
+
+.overlay-container.show {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000099;
+  opacity: 1;
+  background: aliceblue;
+}
+
+.overlay-container.show .overlay-content {
+  overflow: scroll;
+  height: 100%;
+  padding: 40px 80px;
+}
+
+.overlay-container.show .overlay-footer {
+  height: 40px;
+}
+
+.overlay-container.show .overlay-content .project-details {
+  display: none;
+}
+
+.overlay-container.show .overlay-content .project-details.show{
+  display: block;
+}
+
+.overlay-container.show .overlay-close-icon {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+}
+
+.clear-both {
+  clear: both;
+}
+
+/**
+* Project details overlay page
+*/
+
+.project-details h1{
+  text-align: center;
+}
+
+.project-details .img-container {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.project-details p, .project-details li{
+  font-size: 15px;
+}
+
+/*
+@media only screen and (max-width: 600px) {
+  .overlay-container.show .overlay-content {
+    padding: 20px 10px;
+  } 
+}
+*/

@@ -1,4 +1,12 @@
 
+let id = null;
+
+const closePopup = () => {
+    $('.overlay-container').removeClass('show');
+    $('body').css("overflow","auto");
+    $('#'+id).removeClass('show');
+}
+
 (function($) {
     "use strict";
 
@@ -25,5 +33,22 @@
             top: 100
         }
     })
+
+    $('.gallery li').click(function(e) {
+        id = $(e.target).closest('li').attr('data-id');
+        $('.overlay-container').addClass('show');
+        $('body').css("overflow","hidden");
+        $('#'+id).addClass('show');
+    });
+
+    $('.overlay-close-icon').click(function(){
+        closePopup();
+    });
+
+    $(document).bind('keydown', function(e) { 
+        if (e.which == 27) {
+            closePopup();
+        }
+    }); 
 
 })(jQuery);
