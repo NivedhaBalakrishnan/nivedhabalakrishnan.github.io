@@ -20,7 +20,7 @@ p {
   line-height: 1.75;
 }
 p.large {
-  font-size: 16px;
+  font-size: 18px;
 }
 a,
 a:hover,
@@ -1019,6 +1019,7 @@ main.gallery {
     height: 200px;
     object-fit: cover;
     border-radius: 100px;
+    border: 4px dotted #023548;
 }
 
 /*
