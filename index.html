@@ -390,8 +390,127 @@
             </div>
 
             <!-- Project details here -->
-            <!-- Aging Clock -->
-            <div class="project-details" id="project_1">Project 1</div>
+            <!-- Drug Discovery -->
+            <div class="project-details" id="project_1">
+                <h1><font size="10">Discover the Undiscovered</font>
+                    <br>Using ML models to find new drugs</br>
+                </h1>
+                
+            <div>
+                <h2>Problem Statement</h2>
+                <p align="justify">
+                    Our project focuses on using machine learning models for drug discovery in the field of thrombosis, a leading cause of morbidity and mortality. Thrombin is a key enzyme involved in clot formation, and current direct thrombin inhibitors (DTI) have limitations due to their association with bleeding or thrombotic risks in certain situations. Therefore, discovering new antithrombotic agents with improved safety profiles is essential. By leveraging machine learning models, we aim to identify potential compounds with antithrombotic activity and prioritize them for further experimental validation. Our approach can accelerate the drug discovery process and lead to the development of effective and safe antithrombotic agents.
+                </p>
+            </div>
+        
+                <h2>Goal</h2>
+                <p align="justify">
+                    The goal of our project is to develop a two-staged machine learning model that can predict new antithrombotic peptides. Using machine learning models, we can efficiently screen a vast chemical and biological space and accurately predict new molecules in silico. The first stage of our model will use classification models to identify peptides with thrombin inhibitory activity. The second stage will use regression models to rank peptides based on their effective thrombin inhibitory potential. By successfully developing this two-staged machine learning model, we aim to accelerate the discovery of novel and effective antithrombotic peptides.
+                </p>
+        
+                <h2>Data Collection and Feature Extraction</h2>
+                <p align="justify">
+                    We curated a positive antithrombotic peptide dataset from peer-reviewed publications, which includes 109 peptides out of which 75 has inhibitory constant (Ki) value. Additionally, we collected a negative peptide dataset from NCBI and Uniprot protein databases, comprising 1065 peptides. These datasets will be used to train and validate our machine learning models for predicting new antithrombotic peptides.
+                </p>
+                <p align="justify">
+                    We then extracted features from these peptides using the BioPython module, a widely used open-source tool for computational biology. These extracted features will be used as inputs to train and validate our machine learning models for predicting new antithrombotic peptides. The figure below shows the extraction features along with its counts. Thus, in total we have 572 features for each peptides.
+
+                </p>
+                <center><img src="drug/features.png" height="50%" width="50%"></center>    
+                
+                
+                <h2>Exploratory Data Analysis</h2>
+                <p alingn="justify">
+                    Exploratory Data Analysis (EDA) is a crucial step in any data analysis project as it helps in understanding the differences in characteristics and properties of the positive and negative peptides. In this project, the data is analyzed through visualizations in using Matplotlib and Seaborn libraries.
+                </p>
+                    <h3>Analysis of Features</h3>
+                    <div class="clearfix">
+                        <div class="img-container">
+                            <img src="drug/Slide2.PNG" alt="Italy" style="width:100%">
+                        </div>
+                        <div class="img-container">
+                        <img src="drug/Slide3.PNG" alt="Forest" style="width:100%">
+                        </div>
+                    </div>
+                    <h4>Observation</h4>
+                    <p>
+                        <ul>
+                            <li>The positive antithrombotic peptide dataset we curated consists of more peptides with a sequence length of 3-40, while the number of peptides with an increase in sequence length is comparatively lower.</li>
+                            <li>Our analysis indicates that the amino acids R, E, P, and F are present at a higher frequency in the positive antithrombotic peptide dataset. This suggests that these amino acids may play a crucial role in the thrombin inhibitory activity of these peptides.</li>  
+                            <li>Also, we observed that the positive antithrombotic peptide dataset has a relatively higher proportion of peptides with a negative net charge and a greater helical content compared to the negative peptide dataset. These findings suggest that the presence of a negative charge and helical structure may potentially contribute to the thrombin inhibitory activity of these peptides.</li>  
+                        </ul>
+                    </p>
+                
+                <h2>Modelling and Evaluation</h2>
+                <h3>Phase 1</h3>
+                <center><img src="drug/class.png" height="50%" width="50%"></center>
+                <p>
+                    In the first phase of our project, we developed a machine learning classification model to identify whether a given peptide is positive or negative for thrombin inhibitory activity. To improve the performance of the model, we employed several techniques such as:
+                <ul>
+                    <li><b>Normalization: </b>We used MinMaxScaler, a commonly used normalization technique, to scale our features to a specific range (in our case, between 0 and 1). This technique helped us to eliminate any potential bias that may arise from differences in the scales of our features.</li>
+                    <li><b>Recursive Feature Elimination (RFE): </b>We used RFE, a feature selection technique, to select the most important features that contribute to the thrombin inhibitory activity of the peptides. RFE reduced the number of features from 572 to 165 as shown in the figure below, making the model more efficient and effective.</li>
+                    <li><b>Hyperparameter Tuning: </b>We used RandomizedSearchCV, a technique for hyperparameter tuning, to find the optimal combination of hyperparameters for our machine learning classification model. Hyperparameters are adjustable parameters that determine the performance of the model. The tuning process helped us to identify the best combination of hyperparameters to achieve the highest accuracy for our model.</li>
+                </ul>
+                </p>
+                <div class="clearfix" style="display:flex; align-items:center;">
+                    <div class="img-container">
+                        <img src="drug/Slide5.PNG" style="width:100%">
+                    </div>
+                    <div class="img-container">
+                    <img src="drug/classper.png" alt="Forest" style="width:100%">
+                    </div>
+                </div>
+                <p>After comparing the performance of Support Vector Classification (SVC) with radial basis function (RBF) and SVC with linear kernel, we found that both performed better than other models. Therefore, we decided to build an ensemble model that consists of both SVC RBF and SVC Linear to further improve the accuracy and reliability of our classification model. The ensemble model combines the outputs of both models to make a final prediction, which often leads to better performance than a single model.</p>
+
+                <h3>Phase 2</h3>
+                <center><img src="drug/reg.png" height="50%" width="50%"></center>
+                <p>
+                    In phase 2 of the project, we aim to build a machine learning regression model to predict the inhibitory constant (Ki) of positive peptides, which measures the strength of the binding between the peptide and thrombin. 
+                    Since there is much variation in the Ki values, we split the Ki values into two buckets, small and large. This was done to create a binary classification problem where we can predict if a peptide has a small or large Ki value. 
+                    We built a classification model to predict which bucket a peptide belongs to using the features extracted from the positive peptide dataset.
+                </p>
+                <div class="clearfix" style="display:flex; align-items:center;">
+                    <div class="img-container">
+                        <img src="drug/sfs.png" style="width:100%">
+                    </div>
+                    <div class="img-container">
+                    <img src="drug/regper.png" alt="Forest" style="width:100%">
+                    </div>
+                </div>
+                <p>We also built two separate regression models for each bucket to predict the Ki values of peptides within each bucket. The regression models were trained on the subset of positive peptides with either small or large Ki values, and used the same set of features selected through feature selection techniques such as SFS.                     
+                    To improve the performance of the model, we employed Normalization, Hyperparameter tuning but instead of RFE we used Sequential Forward Selection method to reduce the number of features.
+                
+                <b>Sequential Forward Selection: </b>Feature selection technique used to select a subset of relevant features from a larger set of available features. In our project, we used SFS to identify the most relevant features for our regression model to predict the inhibitory constant (Ki) of positive peptides. After applying SFS, we identified a subset of 34 features that were most important for predicting Ki values. These 34 features were used in our regression model to achieve better performance and more accurate predictions.
+                
+                By splitting the Ki values into two buckets and building separate models for each, we were able to achieve better prediction accuracy for both classification and regression tasks.
+                </p>
+
+                <h4>Identification of new peptides with antithrombin activity</h4>
+                <p align="justify">
+                We collected 10 million peptides from protein database which we ran into the Two-staged ML pipeline as shown below:
+                </p>
+                <center><img src="drug/pipe.png" height="70%" width="70%"></center>
+                <p>The collected peptides are from various sources as shown in the figure below. We selected the peptides by moving the decision function for the ensemble model. We did this to ensure the validity of the peptides and to be more confident about them. 
+                Finally, our model identified 573 peptides that might potentially have antithrombotic properties. We then predicted Ki values for 573 peptides using classification and regression model built in the Phase 2. The Ki distributions of the predicted peptides are shown below:</p>
+                <center><img src="drug/Slide7.PNG" height="70%" width="70%"></center>
+                </p>
+        
+                <h4>Selecting Peptides for Wet-lab experiments</h4>
+                <p  align="justify">
+                Now that we have curated 573 peptides from 10 million test sets, we have to choose peptides for further analysis. Since, peptides with large sequence length is not easily digestible, we choose 18 peptides which has sequence length less than or equal to 25 for futher wet-lab experimental analysis.
+                </p>
+                <center><img src="drug/ki.png" height="70%" width="70%"></center>
+                <p>
+                We hope to find next potential drug to inhibit thrombin out of this 18.
+                </p>
+                <h2>Future Work</h2>
+                <ul>
+                    <li>Implementing NLP in the modelling phase, which will predict the peptides based on the sequences</li>
+                    
+                    <li>Implementing deep learning models.</li>
+                </ul>
+            </div>
+            </div>
 
             <!-- Project details here -->
             <!-- Aging Clock -->
@@ -593,7 +712,7 @@
                     <li>Alkaline Phosphatase and Urea is the third and fourth important features. This is in line with the correlation matrix, as these two features had 45% correlation with Age.</li>
                     <li>Bilirubin and blood indicators such as Hemoglobin, Hematocrit are poor indicators of age according to this findings.</li>
                 </ul>
-        
+                </div>
         
                 <!-- <h2>Conclusions and Drawbacks</h2> -->
                 
@@ -712,9 +831,136 @@
                 </ul>
             </div>
             
+            <!-- preowned cars -->
+            <div class="project-details" id="project_4">
+                <h1><font size="10">Driven by the data</font>
+                    <br>Big Data Analytics of the Preowned car market</br>
+                </h1>
+        
+                <h2>Goal</h2>
+                <p align="justify">
+                    The objective of this project is to leverage AWS to build a data pipeline for a pre-owned car dataset to analyze the factors that impact the price of the car, such as mileage, year of manufacture, make and model, and location. The dataset comprises information on the price, mileage, year of manufacture, make and model, and location of pre-owned cars. The project aims to gain insights into the factors that affect the car's price and use visualizations to interpret and communicate the results effectively. With the data pipeline, the project aims to automate data processing and analysis tasks to increase efficiency and scalability.
+                </p>
+        
+                <h2>Data Collection</h2>
+                <p align="justify">
+                    In the data collection process for this project, we obtained the pre-owned car dataset with 3 million samples from Kaggle datasets, which contains information on the price, mileage, year of manufacture, make and model, and location of over 3 million pre-owned cars in the United States. Additionally, we retrieved data from Craigslist, a popular online marketplace for buying and selling used cars. To ensure the dataset's geographic accuracy, we extracted US zipcodes from Simplemaps and mapped them to the car's location data. 
+                </p>
+                
+                <h2>Data Preprocessing</h2>
+                <p align="justify">
+                    In the data preprocessing phase using AWS Glue, we performed the following steps on the pre-owned car dataset:
+                </p>
+                <ul>
+                    <li>Removing rows with inadequate data: We removed any rows that had missing or incomplete data, which could skew our analysis and lead to inaccurate insights.</li>
+                    <li>Removing duplicates: We eliminated any duplicate rows to ensure that our analysis is based on unique data points.</li>
+                    <li>Removing irrelevant columns: We dropped any columns that were not essential to our analysis, such as unique identifiers or redundant information.</li>
+                    <li>Data transformations: We performed data transformations to convert data types and standardize the format of the data, making it easier to analyze.</li>
+                    <li>Imputing null values: We imputed null values using different techniques such as mean, median or mode, depending on the column's nature, to avoid losing too much data.</li>
+                </ul>
+                <p>Overall, these data preprocessing steps using AWS Glue helped us to clean and standardize the data, making it more suitable for analysis and machine learning.</p>
+                
+                <h2>Data pipeline</h2>
+                <p>In the data pipeline for this project, we used AWS services such as S3, Redshift/RDS, and visualization tools to store, process, and analyze the pre-owned car dataset.</p>
+                <p>First, we stored the pre-processed data in an S3 bucket, which allows us to easily and securely store and retrieve large amounts of data. Next, we used both Redshift and RDS, depending on the nature of the analysis, to load and transform the data into a structured format that is optimized for querying and analysis. Finally, we used visualization tools such as Tableau to create interactive visualizations that enable us to communicate insights effectively.
+                <p>Overall, this data pipeline allowed us to store, process, and analyze large amounts of data efficiently, making it easier to extract insights and create visualizations that communicate those insights effectively.</p>             
+                <div class="clearfix">
+                    <div class="img-container">
+                        <img src="car/s3.png" alt="Italy" style="width:100%" valign="center">
+                    </div>
+                    <div class="img-container">
+                    <img src="car/flow.png" alt="Forest" style="width:100%" valign="center">
+                    </div>
+                </div>
+    
+                <div class="clearfix">
+                    <div class="img-container">
+                        <img src="car/rds.png" alt="Italy" style="width:100%" valign="center">
+                    </div>
+                    <div class="img-container">
+                    <img src="car/redshift.png" alt="Forest" style="width:100%" valign="center">
+                    </div>
+                </div>
+                
+                <h2>Data Visualization</h2>
+                <div class="clearfix">
+                    <div class="img-container">
+                        <img src="car/1.png" alt="Italy" style="width:100%">
+                    </div>
+                    <div class="img-container">
+                    <img src="car/2.png" alt="Forest" style="width:100%">
+                    </div>
+                </div>
+
+                <h2>Key Inferences</h2>
+                <p>Based on our analysis of the pre-owned car dataset, we found that the following factors have a significant impact on the price of the car:</p>
+                <ul>
+                    <li><b>Mileage:</b> The number of miles covered by the car is a key determinant of its price. Cars with lower mileage are priced higher than those with higher mileage.</li>
+                    <li><b>Accidents:</b> The presence of any accidents or damage history significantly reduced the car's price. Cars with a clean accident history are generally priced higher.</li>
+                    <li><b>Make and model:</b> Certain car makes and models such as Pagani, Bugatti are associated with higher prices due to their perceived reliability, prestige, or popularity.</li>
+                    <li><b>Listing color:</b> The color of the car also impacts the price, with popular colors such as black, white, and yellow generally priced higher than less popular colors.</li>
+                    <li><b>City:</b> The location of the car can also influence its price.</li>
+                    <li><b>Fuel type: </b>The type of fuel the car uses also affect the price, with hybrid and electric cars generally priced higher than gasoline-powered cars.</li>
+                </ul>
+                
+                
+                <!-- <h2>Future Work</h2>
+                <ul>
+                    <li>Streamlining the data to upda.</li>
+                </ul> -->
+            </div>
+
+            <!-- covid -->
+        <div class="project-details" id="project_5">
+            <h1><font size="10">Mapping the Pandemic</font>
+                <br>A Geographic Analysis of COVID Data in US</br>
+            </h1>
+    
+            <h2>Goal</h2>
+            <p align="justify">
+                The goal of the project is to analyze the COVID-19 data for cases and deaths in the United States to gain insights into the spread and impact of the virus and inform public health policies and interventions. By analyzing the data, we aim to identify patterns, trends, and factors contributing to changes in cases and deaths over time, demographic groups affected, regional differences, and effective public health policies and interventions. The ultimate goal is to use this information to help mitigate the impact of the pandemic on public health, the economy, and society.
+            </p>
+    
+            <h2>Data Collection</h2>
+            <p align="justify">
+                We obtained the COVID-19 data for cases and deaths in the United States from two datasets available on Kaggle. The first dataset contains information on COVID-19 cases and deaths at the state level and has 58,000 rows. The second dataset contains information on COVID-19 cases and deaths at the county level and has 2.5 million rows.
+            </p>    
+
+            <h2>Visualizations</h2>
             
-            <div class="project-details" id="project_4">Project 4</div>
-            <div class="project-details" id="project_5">Project 5</div>
+            <div class="clearfix">
+                <div class="img-container">
+                    <img src="covid/total cases.png" alt="Italy" style="width:100%">
+                </div>
+                <div class="img-container">
+                <img src="covid/total death.png" alt="Forest" style="width:100%">
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div class="img-container">
+                    <img src="covid/average.png" alt="Italy" style="width:100%">
+                </div>
+                <div class="img-container">
+                <img src="covid/counties.png" alt="Forest" style="width:100%">
+                </div>
+            </div>
+            
+            <h2>Key Inferences</h2>
+            <p>Here are some insights we could get from the above analysis</p>
+            <ul>
+                <li>All the years combined California has highest Covid-19 cases and deaths over other states. This is followed by Texas and Florida.</li>
+                <li>American Samao has the least number of cases and deaths.</li>
+                <li>Rhode Island has the highest average cases per 100k where Arizona has highest average deaths per 100k.</li>
+                <li>Maine and Northern Mariana Islands have lowest average cases and deaths per 100k respectively.</li>
+            </ul>
+            
+            
+            <h2>Future Work</h2>
+            <ul>
+                <li>Combining other datasets and analyze the impact during COVID in each states and county.</li>
+            </ul>
+        </div>
 
             <!-- NBA Basketball Analytics -->
             <div class="project-details" id="project_6">
