@@ -36,6 +36,12 @@ const closePopup = () => {
 
     $('.gallery li').click(function(e) {
         id = $(e.target).closest('li').attr('data-id');
+
+        // Remove below lines when project details are added
+        if(id== 'project_7' || id == 'project_8' || id == 'project_9' || id == 'project_10') {
+            return;
+        }
+
         $('.overlay-container').addClass('show');
         $('body').css("overflow","hidden");
         $('#'+id).addClass('show');

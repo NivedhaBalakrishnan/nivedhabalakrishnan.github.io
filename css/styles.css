@@ -1019,7 +1019,6 @@ main.gallery {
     height: 200px;
     object-fit: cover;
     border-radius: 100px;
-    border: 4px dotted #023548;
 }
 
 /*
@@ -1085,4 +1084,36 @@ main.gallery {
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: 10px;
+}
+
+.accomplishments {
+  padding-top: 20px;
+}
+
+.accomplishments h4 {
+  text-align: left;
+}
+
+.accomplishments ul {
+  padding: 10px;
+}
+
+.accomplishments li {
+  font-size: 17px;
+  text-align: left;
+}
+
+.pic-wrapper .resume-button a {
+  margin: 25px 0 0 0;
+  border-radius: 45px;
+  border: none;
+  color: #fff;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(31,101,122,1) 51%, rgba(0,212,255,1) 100%);
+}
+
+.pic-wrapper .resume-button a:hover {
+  -webkit-box-shadow: 2px -2px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px -2px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 2px -2px 5px 0px rgba(0,0,0,0.75);
 }
