@@ -1108,8 +1108,9 @@ main.gallery {
   border-radius: 45px;
   border: none;
   color: #fff;
-  background: rgb(2,0,36);
-  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(31,101,122,1) 51%, rgba(0,212,255,1) 100%);
+  background: #023548;
+  padding: 10px 25px;
+  font-size: 14px;
 }
 
 .pic-wrapper .resume-button a:hover {
