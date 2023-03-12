@@ -1011,7 +1011,8 @@ main.gallery {
   .timeline-image img {
     top: 6px;
     left: 10px;
-    position: relative;
+    position: relative; 
+  }
 }
 
 .pic-wrapper {
