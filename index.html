@@ -770,18 +770,18 @@
                 <div>
                 <h2>Problem Statement</h2>
                 <p align="justify">
-                    The COVID-19 pandemic has brought significant changes to the way we live our lives, including the way we connect and form relationships. Dating apps have emerged as a critical tool for people to maintain their social lives while adhering to social distancing measures. However, as dating apps have become more widely used, so too have concerns about the quality of the user experience. To address these concerns, analyzing Google app reviews of dating apps can be a valuable tool for identifying common issues and trends. By doing so, app developers can gain a deeper understanding of user needs and preferences and make targeted improvements to enhance the overall user experience. This can lead to higher levels of satisfaction, increased success rates, and improved safety measures for users of dating apps during the pandemic and beyond. In short, analyzing Google app reviews is a crucial step in ensuring that dating apps continue to meet the evolving needs of their users, and remain a reliable and valuable tool for fostering meaningful connections.
+                    The COVID-19 pandemic has brought significant changes to the way we live our lives, including the way we connect and form relationships. Dating apps have emerged as a critical tool for people to maintain their social lives while adhering to social distancing measures. However, as dating apps have become more widely used, so too have concerns about the quality of the user experience. To address these concerns, analyzing Google app reviews of dating apps can be a valuable tool for identifying common issues and trends.
                 </p>
                 </div>
         
                 <h2>Goal</h2>
                 <p align="justify">
-                    The aim of this project is to analyze the performance of four dating apps - Bumble, Hinge, Match, and Tinder - during the COVID-19 pandemic by conducting a sentiment analysis of their Google app reviews. By analyzing the user feedback, we can gain valuable insights into the common issues and trends experienced by users and identify their needs and preferences. Moreover, we will visualize the app's ratings over time, before, during, and after the pandemic, to determine any significant changes in user behavior and preferences. While we have used word cloud and Vader sentimental analysis to evaluate each app's sentiment, we can draw meaningful conclusions from our analysis and provide app developers with the necessary information to improve their app's user experience, safety measures, and success rates. This project serves as an important tool for app developers to ensure that their apps continue to meet the evolving needs of their users and foster meaningful connections.
+                    The aim of this project is to analyze the performance of four dating apps - Bumble, Hinge, Match, and Tinder - during the COVID-19 pandemic by conducting a sentiment analysis of their Google app reviews. By analyzing the user feedback, we can gain valuable insights into the common issues and trends experienced by users and identify their needs and preferences. Moreover, we will visualize the app's ratings over time, before, during, and after the pandemic, to determine any significant changes in user behavior and preferences.
                 </p>
         
                 <h2>Data Collection</h2>
                 <p align="justify">
-                    The dataset used in this project consists of biomarkers obtained from laboratory analysis of blood and urine samples. The biomarkers were collected from the National Health and Nutrition Examination Survey (<a href="https://wwwn.cdc.gov/nchs/nhanes/" style="color: rgb(27, 3, 3);">NHANES</a>), which is a program that gathers health and nutritional information from a representative sample of the US population. NHANES provides a valuable resource for studying the relationship between biomarkers and aging. The dataset used in this project consists of over 100,000 samples and 22 features including Age, Gender and other Biochemical profile.
+                    The data is web scrapped from Google Play Store using <b>Beautiful Soup</b>.
                 </p>    
                 
                 
@@ -844,11 +844,11 @@
                 <h3>Key Insights</h3>
                 <p>Here are some insights we could get from the above analysis</p>
                 <ul>
-                    <li>Fake profiles are a major concern for users of dating apps, as they undermine trust and authenticity. Dating app developers need to implement measures to prevent and detect fake profiles to prioritize user safety and satisfaction.</li>
-                    <li>Users of Bumble and Tinder have expressed frustration with the apps, with some feeling that they are a waste of time. Additionally, some users have reported being banned from Tinder, which has further added to their frustration and negative sentiment towards the app.</li>
-                    <li>Although negative feedback can be found for dating apps such as Bumble, Hinge, Match, and Tinder, it's important to note that there are also positive comments from many satisfied users who appreciate the app's features and performance.</li>
+                    <li><b>Fake profiles</b> are a major concern for users of dating apps, as they undermine trust and authenticity.</li>
+                    <li>Users of <b>Bumble and Tinder have expressed frustration</b> with the apps, with some feeling that they are a waste of time. Additionally, some users have reported being banned from Tinder, which has further added to their frustration and negative sentiment towards the app.</li>
+                    <li>Although negative feedback can be found for all the dating apps, there are also positive comments from <b>many satisfied users</b> who appreciate the app's features and performance.</li>
                     <li>On analyzing the overall ratings, Hinge has performed better.</li>
-                    <li>The COVID-19 pandemic had a significant impact on the user ratings of all the dating apps. However, Match was an exception to this trend and did not experience a significant decrease in user ratings during the pandemic.</li>
+                    <li>The <b>COVID-19 pandemic had a significant impact</b> on the user ratings of all the dating apps. However, <b>Match was an exception</b> to this trend and did not experience a significant decrease in user ratings during the pandemic.</li>
                     <li>Over the period from 2018 to 2022, there was a noticeable shift in user sentiment towards dating apps, as reflected in the user ratings. This shift can provide valuable insights into changes in user behavior and preferences over time, which can be useful for app developers to improve the user experience and satisfaction.</li>
                 </ul>
                 
@@ -872,48 +872,59 @@
                     </div>
                 <h2>Goal</h2>
                 <p align="justify">
-                    The objective of this project is to leverage AWS to build a data pipeline for a pre-owned car dataset to analyze the factors that impact the price of the car, such as mileage, year of manufacture, make and model, and location. The dataset comprises information on the price, mileage, year of manufacture, make and model, and location of pre-owned cars. The project aims to gain insights into the factors that affect the car's price and use visualizations to interpret and communicate the results effectively. With the data pipeline, the project aims to automate data processing and analysis tasks to increase efficiency and scalability.
+                    The objective of this project is to <b>leverage AWS to build a data pipeline</b> for a pre-owned car dataset to analyze the factors that impact the price of the car, such as mileage, year of manufacture, make and model, and location. The project aims to gain insights into the factors that affect the car's price and use visualizations to interpret and communicate the results effectively. With the data pipeline, the project aims to automate data processing and analysis tasks to increase efficiency and scalability.
                 </p>
         
                 <h2>Data Collection</h2>
                 <p align="justify">
-                    In the data collection process for this project, we obtained the pre-owned car dataset with 3 million samples from Kaggle datasets, which contains information on the price, mileage, year of manufacture, make and model, and location of over 3 million pre-owned cars in the United States. Additionally, we retrieved data from Craigslist, a popular online marketplace for buying and selling used cars. To ensure the dataset's geographic accuracy, we extracted US zipcodes from Simplemaps and mapped them to the car's location data. 
+                    In the data collection process for this project, we obtained the pre-owned car dataset with <b>3 million samples</b> from Kaggle datasets, which contains information on the price, mileage, year of manufacture, make and model, and location of pre-owned cars in the United States. Additionally, we retrieved data from <b>Craigslist</b>, a popular online marketplace for buying and selling used cars. To ensure the dataset's geographic accuracy, we extracted <b>US zipcodes from Simplemaps</b> and mapped them to the car's location data. 
                 </p>
                 
                 <h2>Data Preprocessing</h2>
                 <p align="justify">
-                    In the data preprocessing phase using AWS Glue, we performed the following steps on the pre-owned car dataset:
+                    In the data preprocessing phase using <b>AWS Glue</b>, we performed the following steps on the pre-owned car dataset:
                 </p>
                 <ul>
-                    <li>Removing rows with inadequate data: We removed any rows that had missing or incomplete data, which could skew our analysis and lead to inaccurate insights.</li>
-                    <li>Removing duplicates: We eliminated any duplicate rows to ensure that our analysis is based on unique data points.</li>
-                    <li>Removing irrelevant columns: We dropped any columns that were not essential to our analysis, such as unique identifiers or redundant information.</li>
-                    <li>Data transformations: We performed data transformations to convert data types and standardize the format of the data, making it easier to analyze.</li>
-                    <li>Imputing null values: We imputed null values using different techniques such as mean, median or mode, depending on the column's nature, to avoid losing too much data.</li>
+                    <li>Removing rows with inadequate data</li>
+                    <li>Removing duplicates</li>
+                    <li>Removing irrelevant columns</li>
+                    <li>Data transformations</li>
+                    <li>Imputing null values</li>
                 </ul>
                 <p>Overall, these data preprocessing steps using AWS Glue helped us to clean and standardize the data, making it more suitable for analysis and machine learning.</p>
                 
                 <h2>Data pipeline</h2>
                 <p>In the data pipeline for this project, we used AWS services such as S3, Redshift/RDS, and visualization tools to store, process, and analyze the pre-owned car dataset.</p>
-                <p>First, we stored the pre-processed data in an S3 bucket, which allows us to easily and securely store and retrieve large amounts of data. Next, we used both Redshift and RDS, depending on the nature of the analysis, to load and transform the data into a structured format that is optimized for querying and analysis. Finally, we used visualization tools such as Tableau to create interactive visualizations that enable us to communicate insights effectively.
-                <p>Overall, this data pipeline allowed us to store, process, and analyze large amounts of data efficiently, making it easier to extract insights and create visualizations that communicate those insights effectively.</p>             
-                <div class="clearfix">
+            
+            <div class="clearfix">
+            <div class="img-container">
+                <img src="car/s3.png" alt="Italy" style="width:70%" valign="center">
+                <img src="car/flow.png" alt="Italy" style="width:70%" valign="center">
+            </div>
+            <div class="img-container">
+                <br>
+                <br>
+                <img src="car/rds.png" alt="Italy" style="width:70%" valign="center">
+                <img src="car/redshift.png" alt="Italy" style="width:70%" valign="center">
+            </div>
+            </div>
+                <!-- <div class="clearfix">
                     <div class="img-container">
-                        <img src="car/s3.png" alt="Italy" style="width:100%" valign="center">
+                        <img src="car/s3.png" alt="Italy" style="width:50%" valign="center">
                     </div>
                     <div class="img-container">
-                    <img src="car/flow.png" alt="Forest" style="width:100%" valign="center">
+                    <img src="car/flow.png" alt="Forest" style="width:50%" valign="center">
                     </div>
-                </div>
+                </div> -->
     
-                <div class="clearfix">
+                <!-- <div class="clearfix">
                     <div class="img-container">
                         <img src="car/rds.png" alt="Italy" style="width:100%" valign="center">
                     </div>
                     <div class="img-container">
                     <img src="car/redshift.png" alt="Forest" style="width:100%" valign="center">
                     </div>
-                </div>
+                </div> -->
                 
                 <h2>Data Visualization</h2>
                 <div class="clearfix">
@@ -1009,18 +1020,18 @@
                 <div>
                 <h2>Problem Statement</h2>
                 <p align="justify">
-                    In today's data-driven world, the use of database management systems has become increasingly important for businesses and organizations to store and manage their data effectively. The National Basketball Association (NBA) is no exception, as it generates vast amounts of data each season, including player statistics, team rankings, and game scores. To make informed decisions, it is important to build high-performing database management systems that can handle large amounts of data and support efficient querying for analysis. This project aims to build and compare the performance of two popular database management systems, MySQL and MongoDB, using JMeter with NBA data. By analyzing the data and gaining insights into trends and patterns, the project can help organizations and NBA enthusiasts make informed decisions to improve player and team performance, inform strategic decision-making.
+                    In today's data-driven world, the use of database management systems has become increasingly important for businesses and organizations to store and manage their data effectively. The National Basketball Association (NBA) is no exception, as it generates vast amounts of data each season, including player statistics, team rankings, and game scores. To make informed decisions, it is important to build high-performing database management systems that can handle large amounts of data and support efficient querying for analysis.
                 </p>
                 </div>
         
                 <h2>Goal</h2>
                 <p align="justify">
-                    This project aims to build two database management systems, MySQL and MongoDB, and compare their performance using JMeter with NBA data. The project also involves analyzing NBA stats to gain useful insights from the data. The first part involves building the databases and populating them with NBA data. The second part involves testing the performance of the databases using JMeter. The final part involves analyzing the NBA stats to gain insights into player performance, team performance, and trends in the NBA. The project aims to compare the performance of MySQL and MongoDB databases and gain insights into the NBA data using database management systems and performance testing tools.
+                    This project aims to <b>build and compare the performance of two popular database management systems, MySQL and MongoDB, using JMeter</b> with NBA data. The project also involves analyzing NBA stats to gain useful insights from the data. The first part involves building the databases and populating them with NBA data. The second part involves testing the performance of the databases using JMeter. The final part involves analyzing the NBA stats to gain insights into player performance, team performance, and trends in the NBA.
                 </p>
         
                 <h2>Data Collection</h2>
                 <p align="justify">
-                    The data for this project was collected from the NBA website through web scraping, resulting in more than 60,000 games, 30 teams, 4.5 players, and their statistics. The collected data was then distributed among 16 tables, each containing specific information related to the NBA, including game scores, team rankings, player statistics, and more. The data spans from the year 1946 to 2020, covering over seven decades of NBA history. The use of web scraping techniques enabled the collection of a large amount of data, providing a comprehensive dataset for analysis and insights into trends and patterns over time.
+                    The data for this project was collected from the NBA website through web scraping, resulting in more than <b>60,000 games, 30 teams, 4.5 players</b>, and their statistics. The collected data was then distributed among <b>16 CSVs</b>, each containing specific information related to the NBA, including game scores, team rankings, player statistics, and more. The data spans from the year 1946 to 2020, covering over <b>seven decades of NBA history</b>.
                 </p>    
                 
                 <h2>Workflow</h2>        
@@ -1057,14 +1068,13 @@
                     </div>
                 </div>
                 
-                <center><img src="nba/player.png" height="70%" width="70%"></center>
+                <center><img src="nba/player.png" height="60%" width="60%"></center>
 
                 <h2>Key Inferences</h2>
                 <p>Here are some insights we could get from the above analysis</p>
                 <ul>
                     <li>The chance of winning as a home team is higher than as an opposite team.</li>
                     <li>Moderate to higher correlation between the winning rate of the team and the 3 points score efficiency, free throw percentage, rebound percentage.</li>
-                    <li>Although negative feedback can be found for dating apps such as Bumble, Hinge, Match, and Tinder, it's important to note that there are also positive comments from many satisfied users who appreciate the app's features and performance.</li>
                     <li>The team with both good offensive and defensive strategies have a high winning percentage.</li>
                     <li>No significant correlation between the Team salary with their performance and Player Salary with their performance.</li>
                 </ul>
