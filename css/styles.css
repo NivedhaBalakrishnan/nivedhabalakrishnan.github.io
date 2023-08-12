@@ -1090,6 +1090,10 @@ main.gallery {
   backface-visibility: hidden;
 }
 
+.flip-card-front, .flip-card-back p {
+ font-size: 18px;
+}
+
 .flip-card-front {
   background-color: #bbb;
   color: black;
