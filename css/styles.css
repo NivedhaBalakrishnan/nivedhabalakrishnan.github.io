@@ -958,6 +958,11 @@ main.gallery {
 
 .overlay-container.show .overlay-content .project-details.show{
   display: block;
+  padding: 30px;
+}
+
+.project-details.show li, .project-details.show p {
+  font-size: 18px;
 }
 
 .overlay-container.show .overlay-close-icon {
@@ -968,6 +973,10 @@ main.gallery {
 
 .clear-both {
   clear: both;
+}
+
+.modelling-image img { 
+  max-width: 100%;
 }
 
 /**
