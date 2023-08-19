@@ -965,6 +965,10 @@ main.gallery {
   font-size: 18px;
 }
 
+.project-details.show img {
+  max-width: 100%;
+}
+
 .overlay-container.show .overlay-close-icon {
   cursor: pointer;
   position: fixed;
